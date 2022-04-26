@@ -4,7 +4,6 @@ import WeatherInfo from "./components/WeatherInfo";
 import Forecast from "./components/Forecast";
 import Footer from "./components/Footer";
 import axios from "axios";
-import { APIKey } from "./APIKey";
 
 function App() {
 	/*Search*/
@@ -20,6 +19,7 @@ function App() {
 	function updateMetric() {
 		setMetric(metric === "c" ? "f" : "c");
 	}
+	const key = secrets.APIKey;
 
 	/*API Call*/
 	const [weatherData, setWeatherData] = useState();
@@ -28,7 +28,7 @@ function App() {
 			const options = {
 				method: "GET",
 				url: "http://api.weatherapi.com/v1/forecast.json",
-				params: { q: { userInput }, days: "3", key: { APIKey } }
+				params: { q: { userInput }, days: "3", key: { key } }
 			};
 			axios
 				.request(options)
