@@ -1,15 +1,22 @@
 import React from "react";
+import imageSnow from "../assets/pexels-photo-3462588.jpeg";
+import imageRain from "../assets/pexels-alexey-demidov-10421135.jpg";
+import imageCold from "../assets/pexels-photo-1367192.jpeg";
+import imageNeutral from "../assets/unsplash_bg_default.jpg";
+import imageWarm from "../assets/pexels-photo-72473.jpeg";
 
 function WeatherInfo(props) {
 	function backgroundChange() {
 		if (props.data.current.condition.text.includes("snow")) {
-			document.body.style.backgroundImage = "url(../imgs/pexels-photo-3462588.jpeg)";
+			document.body.style["background-image"] = `url(${imageSnow})`;
+		} else if (props.data.current.condition.text.includes("rain")) {
+			document.body.style["background-image"] = `url(${imageRain})`;
 		} else if (props.data.current.temp_c <= 15) {
-			document.body.style.backgroundImage = "url(../imgs/pexels-photo-1367192.jpeg)";
+			document.body.style["background-image"] = `url(${imageCold})`;
 		} else if (props.data.current.temp_c > 15 && props.data.current.temp_c <= 25) {
-			document.body.style.backgroundImage = "url(../imgs/unsplash_bg_default.jpg)";
+			document.body.style["background-image"] = `url(${imageNeutral})`;
 		} else {
-			document.body.style.backgroundImage = "url(../imgs/pexels-photo-72473.jpeg)";
+			document.body.style["background-image"] = `url(${imageWarm})`;
 		}
 	}
 	backgroundChange();

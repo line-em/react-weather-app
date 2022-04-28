@@ -33,3 +33,9 @@ As for tooling, etc, I used:
 ## Changelog
 
 -   1.0 - Initial commit.
+
+VITE .ENV:
+https://stackoverflow.com/questions/70883903/loading-env-variables-in-react-app-using-vite
+https://www.freecodecamp.org/news/how-to-access-secret-api-keys-using-netlify-functions-in-a-react-app/
+https://dev.to/orama254/how-to-use-environment-variables-in-vite-react-template-example-34ff
+https://vitejs.dev/guide/env-and-mode.html#modes
