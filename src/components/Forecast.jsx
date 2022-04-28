@@ -33,7 +33,7 @@ function Forecast(props) {
 					</div>
 					<div className="forecast-day-icon">
 						<img
-							src={`http://${val.day.condition.icon}`}
+							src={`https://${val.day.condition.icon}`}
 							alt="weather icon"
 							className="weather-icon"
 						/>
