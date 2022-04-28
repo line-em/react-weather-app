@@ -10,6 +10,7 @@
 	--light-pink: #edb3ca;
 	--light-pink-transparency: #edb3ca2b;
 	--gradient: linear-gradient(315deg, var(--grey) 0%, var(--grey) 74%);
+	--red: #ff5a607d;
 
 	/* Shadow */
 	--shadow: var(--small-spacing) var(--base-spacing) var(--huge-spacing) var(--black);

@@ -25,18 +25,22 @@ function App() {
 	const [weatherData, setWeatherData] = useState();
 	useEffect(() => {
 		if (userInput) {
-			const options = {
+			const forecastOptions = {
 				method: "GET",
-				url: "http://api.weatherapi.com/v1/forecast.json",
+				url: "https://api.weatherapi.com/v1/forecast.json",
 				params: { q: { userInput }, days: "3", key: api.key }
 			};
 			axios
-				.request(options)
+				.request(forecastOptions)
 				.then(function (response) {
 					setWeatherData(response.data);
+					document.body.querySelector("#searchError").style.display = "none";
+					document.body.querySelector("input").style.border = "none";
 				})
 				.catch(function (error) {
 					console.error(error);
+					document.body.querySelector("input").style.border = "var(--red) 2px solid";
+					document.body.querySelector("#searchError").style.display = "block";
 				});
 		}
 	}, [userInput]);
