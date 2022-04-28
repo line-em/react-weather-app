@@ -8,6 +8,13 @@ function Search(props) {
 		setText("");
 	};
 
+	const enterKey = (event) => {
+		if (event.key === "Enter") {
+			handleSearch();
+			event.preventDefault();
+		}
+	};
+
 	const errorStyle = {
 		color: "var(--white)",
 		textAlign: "center",
@@ -31,6 +38,7 @@ function Search(props) {
 					type="text"
 					name="citySearch"
 					id="citySearch"
+					onKeyDown={enterKey}
 					placeholder="Type a city name here..."
 					value={text}
 					onChange={(event) => setText(event.target.value)}
