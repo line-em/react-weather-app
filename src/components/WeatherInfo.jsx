@@ -33,7 +33,7 @@ function WeatherInfo(props) {
 					</div>
 					{props.data.current.condition.icon && (
 						<img
-							src={`http://
+							src={`https://
 									${props.data.current.condition.icon}`}
 							alt="weather icon"
 							className="weather-icon"
