@@ -24,6 +24,14 @@ As for tooling, etc, I used:
 -   Yarn
 -   Modern CSS Reset
 
+And for the backend:
+
+-   Node.js
+-   Express
+-   Cors
+-   Dotenv
+-   AXIOS
+
 ## Stretch Goals
 
 -   Add a Dark Theme;
