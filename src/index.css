@@ -148,6 +148,12 @@ strong {
 
 /*Search*/
 
+form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 input[type="text"] {
 	font-style: italic;
 	width: 65%;
@@ -301,9 +307,7 @@ footer {
 	}
 
 	.weather-info-content--column {
-		flex-direction: column;
-		justify-content: flex-start;
-		align-items: flex-start;
+		gap: var(--small-spacing);
 		border-bottom: none;
 	}
 
