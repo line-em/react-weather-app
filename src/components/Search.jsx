@@ -4,7 +4,7 @@ function Search(props) {
 	const [text, setText] = React.useState("");
 
 	const handleSearch = () => {
-		event.preventDefault();
+		e.preventDefault();
 		props.getInput(text);
 		setText("");
 	};
